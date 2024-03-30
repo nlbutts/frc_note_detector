@@ -30,6 +30,11 @@ mkdir armnn
 cd armnn
 tar -xf ../ArmNN-linux-aarch64.tar.gz
 
+sudo cp systemd/*.service /lib/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable zmqcam
+sudo systemctl enable yolov8_tflite
+
 # Setup Python 3.9
 #wget https://www.python.org/ftp/python/3.9.19/Python-3.9.19.tar.xz
 
